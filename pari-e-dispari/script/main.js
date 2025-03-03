@@ -17,28 +17,14 @@ console.log(`Computer number is: ${computerNum}`);
 let sum = userNum + computerNum;
 console.log(`The sum is: ${sum}`);
 
-// check if the sum is even or odd
-if (checkSumIsEvenOrOdd(sum)) {
-
-    console.log('The sum is even');
-}
-else {
-    
-    console.log('The sum is odd');
-}
-
 // check the winner between user and computer
-if (userNum > computerNum) {
+if (checkSumIsEvenOrOdd(sum) === evenOrOdd) {
 
     console.log('User win!');
 }
-else if (computerNum > userNum) {
-
-    console.log('Computer win!');
-}
 else {
 
-    console.log('It\'s a tie!');
+    console.log('Computer win!');
 }
 
 // functions
@@ -51,7 +37,7 @@ function checkSumIsEvenOrOdd(sum1) {
 
     if (sum1 % 2 === 0) {
 
-        return true;
+        return 'even';
     }
-    return false
+    return 'odd';
 }
